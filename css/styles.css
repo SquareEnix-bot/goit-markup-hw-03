@@ -3,16 +3,19 @@
   /* fonts */
   --main-font: 'Roboto', sans-serif;
   --secondary-font: 'Raleway', sans-serif;
+
   /* bg-color */
   --main-bg-color: #fff;
   --secondary-bg-color: #2f303a;
   --third-bg-color: #f5f4fa;
+
   /* text-color */
   --title-color: #212121;
   --main-text-color: #757575;
   --accent-color: #2196f3;
   --accent-btn-color: #188ce8;
   --footer-contacts-color: rgba(255, 255, 255, 0.6);
+
   /* other color */
   --header-border-color: #ececec;
   --project-border-color: #eee;
@@ -119,24 +122,49 @@ address {
 
 /* header */
 .header {
-  border: 1px solid var(--header-border-color);
+  max-height: 80px;
+  border-bottom: 1px solid var(--header-border-color);
+}
+
+.header > .container {
+  display: flex;
+}
+
+.header__navigation {
+  display: flex;
+  align-items: center;
 }
 
 .navigation__list,
 .contacts__list {
+  display: flex;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
 
+.navigation__item:not(:last-child),
+.contacts__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.navigation__link,
+.contacts__link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  transition: color 0.3s ease-in-out;
+}
+
 .navigation__logo {
+  display: block;
+  margin-right: 93px;
   color: var(--title-color);
 }
 
 .navigation__link {
   color: var(--title-color);
-  transition: color 0.3s ease-in-out;
 }
 
 .navigation__link:hover,
@@ -145,9 +173,12 @@ address {
   color: var(--accent-color);
 }
 
+.contacts__list {
+  margin-left: auto;
+}
+
 .contacts__link {
   color: var(--main-text-color);
-  transition: color 0.3s ease-in-out;
 }
 
 .contacts__link:hover,
@@ -209,6 +240,15 @@ address {
 }
 
 /* features */
+.features__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.features__item {
+  max-width: 270px;
+}
+
 .features__title {
   margin-bottom: 10px;
   font-weight: 700;
@@ -237,9 +277,23 @@ address {
   color: var(--title-color);
 }
 
+.job-types__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.job-types__img {
+  display: block;
+}
+
 /* team */
 .team {
   background-color: var(--third-bg-color);
+}
+
+.team__list {
+  display: flex;
+  justify-content: space-between;
 }
 
 .team__item {
@@ -252,6 +306,7 @@ address {
 }
 
 .team__item-img {
+  display: block;
   margin-bottom: 30px;
 }
 
@@ -275,6 +330,16 @@ address {
 /* styles portfolio.html */
 
 /* filters */
+.filters__list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.filters__item:not(:last-child) {
+  margin-right: 8px;
+}
+
 .filters__button {
   padding: 6px 22px;
 
@@ -298,17 +363,29 @@ address {
 }
 
 /* projects */
+.projects__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
 /* .projects__item {
-  max-width: 370px;
+  flex-basis: calc((100%-60px) / 3);
 } */
 
 .projects__link {
   display: inline-block;
 }
 
+.projects__img {
+  display: block;
+}
+
 .projects__text {
-  padding: 24px;
-  border: 1px solid var(--project-border-color);
+  padding: 20px 24px;
+  border-right: 1px solid var(--project-border-color);
+  border-bottom: 1px solid var(--project-border-color);
+  border-left: 1px solid var(--project-border-color);
 }
 
 .projects__title {
