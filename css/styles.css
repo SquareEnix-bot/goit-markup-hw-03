@@ -221,7 +221,10 @@ address {
 }
 
 .hero__title {
+  margin-right: auto;
   margin-bottom: 30px;
+  margin-left: auto;
+  max-width: 696px;
 
   font-weight: 900;
   font-size: 44px;
@@ -240,9 +243,16 @@ address {
 }
 
 /* features */
-.features__list {
+.features.section {
+  padding-bottom: 0;
+}
+
+.features__list,
+.job-types__list,
+.team__list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 30px;
 }
 
 .features__item {
@@ -277,10 +287,10 @@ address {
   color: var(--title-color);
 }
 
-.job-types__list {
+/* .job-types__list {
   display: flex;
   justify-content: space-between;
-}
+} */
 
 .job-types__img {
   display: block;
@@ -291,10 +301,11 @@ address {
   background-color: var(--third-bg-color);
 }
 
-.team__list {
+/* .team__list {
   display: flex;
-  justify-content: space-between;
-}
+  justify-content: center;
+  gap: 30px;
+} */
 
 .team__item {
   padding-bottom: 30px;
